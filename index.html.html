@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Website — Smart Websites and AI Automation for Growing Businesses</title>
+  <meta name="description" content="Neo Website builds modern websites, AI WhatsApp chatbots, and AI voice agents that help businesses save time, respond faster, and grow smarter." />
+
+  <!-- Modern Sans-Serif Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-white: #ffffff;
+      --bg-gray: #f8fafc;
+      --bg-subtle: #f1f5f9;
+      --text-primary: #111827;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --border-strong: #d1d5db;
+      --charcoal: #18181b;
+      --charcoal-hover: #27272a;
+      --wa-soft: #ecfdf5;
+      --wa-border: #bbf7d0;
+      --wa-text: #15803d;
+      --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.04);
+      --shadow-sm: 0 6px 20px -4px rgba(17, 24, 39, 0.06), 0 1px 3px rgba(17, 24, 39, 0.03);
+      --shadow-md: 0 18px 40px -12px rgba(17, 24, 39, 0.1), 0 6px 14px -4px rgba(17, 24, 39, 0.04);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+      --container: 1180px;
+      --transition: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      color: var(--text-primary);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    svg {
+      display: block;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--charcoal);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section--white {
+      background-color: var(--bg-white);
+    }
+
+    .section--gray {
+      background-color: var(--bg-gray);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 52px;
+    }
+
+    .section-header--center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      transition: transform var(--transition), background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn--primary,
+    .btn--whatsapp {
+      background-color: var(--charcoal);
+      color: #ffffff;
+      border: 1px solid var(--charcoal);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn--primary:hover,
+    .btn--whatsapp:hover {
+      background-color: var(--charcoal-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn--secondary {
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn--secondary:hover {
+      background-color: var(--bg-gray);
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+
+    .btn--lg {
+      padding: 16px 30px;
+      font-size: 1rem;
+      border-radius: 12px;
+    }
+
+    .btn--sm {
+      padding: 10px 16px;
+      font-size: 0.875rem;
+    }
+
+    /* Gentle Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 1. Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.025em;
+    }
+
+    .brand__mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background-color: var(--charcoal);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.9125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+    }
+
+    .mobile-drawer {
+      display: none;
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px 24px;
+    }
+
+    .mobile-drawer.is-open {
+      display: block;
+    }
+
+    .mobile-drawer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .mobile-drawer__link {
+      display: block;
+      padding: 6px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* 2. Hero Section (Clean Centered Typography Layout) */
+    .hero {
+      padding: 112px 0 104px;
+      background-color: var(--bg-white);
+    }
+
+    .hero__content {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .hero__pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #16a34a;
+    }
+
+    .hero__title {
+      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero__text {
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 42px;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .hero__meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    /* 3. Services Section (Clean, Minimal Service Visuals) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+    }
+
+    .service-visual {
+      height: 196px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Service 1 Visual: Minimal Laptop Mockup */
+    .svc-laptop {
+      width: 100%;
+      max-width: 244px;
+    }
+
+    .svc-laptop__screen {
+      background-color: var(--bg-white);
+      border: 3px solid var(--charcoal);
+      border-radius: 9px 9px 2px 2px;
+      padding: 10px 12px;
+      height: 122px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .svc-laptop__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    .svc-laptop__brand {
+      width: 38px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: var(--charcoal);
+    }
+
+    .svc-laptop__dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .svc-laptop__dots span {
+      width: 12px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--border-strong);
+    }
+
+    .svc-laptop__body {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .svc-line-h {
+      height: 8px;
+      width: 90%;
+      border-radius: 3px;
+      background-color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .svc-line-p {
+      height: 5px;
+      width: 100%;
+      border-radius: 3px;
+      background-color: var(--bg-subtle);
+      margin-bottom: 4px;
+    }
+
+    .svc-line-p--short {
+      width: 68%;
+      margin-bottom: 9px;
+    }
+
+    .svc-btn-bar {
+      width: 50px;
+      height: 15px;
+      border-radius: 4px;
+      background-color: var(--charcoal);
+    }
+
+    .svc-laptop__photo {
+      height: 70px;
+      border-radius: 6px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+
+    .svc-laptop__base {
+      width: 108%;
+      margin-left: -4%;
+      height: 8px;
+      background-color: #cbd5e1;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* Service 2 Visual: Clean WhatsApp Chat Frame */
+    .svc-chat {
+      width: 100%;
+      max-width: 244px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .svc-chat__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    .svc-chat__status {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--wa-text);
+      background-color: var(--wa-soft);
+      border: 1px solid var(--wa-border);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+
+    .svc-chat__body {
+      padding: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      background-color: #fcfcfd;
+    }
+
+    .chat-msg {
+      font-size: 0.72rem;
+      line-height: 1.4;
+      padding: 7px 10px;
+      border-radius: 10px;
+      max-width: 88%;
+    }
+
+    .chat-msg--in {
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      align-self: flex-start;
+    }
+
+    .chat-msg--out {
+      background-color: var(--charcoal);
+      color: #ffffff;
+      align-self: flex-end;
+    }
+
+    /* Service 3 Visual: Minimal Voice Call Card */
+    .svc-voice {
+      width: 100%;
+      max-width: 244px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: var(--shadow-xs);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .svc-voice__head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .svc-voice__avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charcoal);
+      flex-shrink: 0;
+    }
+
+    .svc-voice__info strong {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-primary);
+    }
+
+    .svc-voice__info span {
+      font-size: 0.69rem;
+      color: var(--text-muted);
+    }
+
+    .svc-voice__wave {
+      height: 46px;
+      border-radius: 10px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 0 14px;
+    }
+
+    .svc-bar {
+      width: 3px;
+      border-radius: 999px;
+      background-color: var(--charcoal);
+      opacity: 0.78;
+    }
+
+    .svc-voice__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.69rem;
+      color: var(--text-muted);
+    }
+
+    .service-card__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .service-card__desc {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    /* 4. Why Choose Neo Website */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      box-shadow: var(--shadow-xs);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--border-strong);
+    }
+
+    .benefit-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+    }
+
+    .benefit-card__title {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .benefit-card__desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    /* 5. How It Works */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-xs);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .step-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-card__num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background-color: var(--charcoal);
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .step-card__title {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .step-card__desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    /* 6. Portfolio Section */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .portfolio-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+    }
+
+    .portfolio-card__visual {
+      aspect-ratio: 16 / 9;
+      background-color: var(--bg-gray);
+      border-bottom: 1px solid var(--border);
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portfolio-frame {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-xs);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .portfolio-frame__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 9px;
+    }
+
+    .portfolio-frame__dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .portfolio-frame__dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--border-strong);
+    }
+
+    .portfolio-frame__tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .portfolio-card__body {
+      padding: 26px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .portfolio-card__label {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .portfolio-card__title {
+      font-size: 1.24rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-card__desc {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+      margin-bottom: 22px;
+      flex: 1;
+    }
+
+    /* 7. Testimonials Section */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-xs);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card__quote {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-business {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* 8. FAQ Section */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xs);
+      overflow: hidden;
+    }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      color: var(--text-secondary);
+      transition: transform var(--transition);
+    }
+
+    .faq-trigger[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-panel {
+      display: none;
+      padding: 0 24px 22px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq-panel.is-open {
+      display: block;
+    }
+
+    /* 9. Contact Section */
+    .contact-box {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 64px 36px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-box__title {
+      font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+      font-weight: 800;
+      max-width: 660px;
+      margin: 0 auto 16px;
+    }
+
+    .contact-box__text {
+      font-size: 1.06rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+
+    .contact-box__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .contact-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: border-color var(--transition), background-color var(--transition);
+    }
+
+    .contact-number:hover {
+      border-color: var(--border-strong);
+      background-color: var(--bg-white);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border);
+      padding: 36px 0;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .footer__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Project Preview Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background-color: rgba(17, 24, 39, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal__dialog {
+      width: 100%;
+      max-width: 540px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+    }
+
+    .modal__close:hover {
+      background-color: var(--bg-gray);
+      color: var(--text-primary);
+    }
+
+    .modal__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .modal__title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .modal__desc {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1060px) {
+      .services-grid,
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-4,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero {
+        padding: 72px 0 68px;
+      }
+
+      .hero__meta {
+        gap: 16px;
+      }
+
+      .services-grid,
+      .grid-4,
+      .process-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 44px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="brand" aria-label="Neo Website Home">
+        <span class="brand__mark" aria-hidden="true">N</span>
+        <span>Neo Website</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-drawer__links">
+        <li><a href="#home" class="mobile-drawer__link">Home</a></li>
+        <li><a href="#services" class="mobile-drawer__link">Services</a></li>
+        <li><a href="#why-us" class="mobile-drawer__link">Why Us</a></li>
+        <li><a href="#process" class="mobile-drawer__link">Process</a></li>
+        <li><a href="#portfolio" class="mobile-drawer__link">Portfolio</a></li>
+        <li><a href="#faq" class="mobile-drawer__link">FAQ</a></li>
+        <li><a href="#contact" class="mobile-drawer__link">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%;">
+        Chat on WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero__content reveal">
+          <div class="hero__pill">
+            <span class="hero__pill-dot" aria-hidden="true"></span>
+            Web Development &amp; AI Automation
+          </div>
+          <h1 class="hero__title">Smart Websites and AI Automation for Growing Businesses.</h1>
+          <p class="hero__text">
+            Neo Website builds modern websites, AI WhatsApp chatbots, and AI voice agents that help businesses save time, respond faster, and grow smarter.
+          </p>
+          <div class="hero__cta">
+            <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              Chat on WhatsApp
+            </a>
+            <a href="#services" class="btn btn--secondary">Explore Services</a>
+          </div>
+
+          <div class="hero__meta">
+            <span class="hero__meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Custom Websites
+            </span>
+            <span class="hero__meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              AI WhatsApp Chatbots
+            </span>
+            <span class="hero__meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              AI Voice Agents
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="section section--gray">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Our Services</span>
+          <h2 class="section-title">Everything your business needs to look sharp and automate faster</h2>
+          <p class="section-subtitle">
+            Three focused digital solutions built to attract customers, automate inquiries, and save hours of manual work.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Custom Web Development -->
+          <article class="service-card reveal">
+            <div class="service-visual" aria-label="Custom Web Development laptop mockup">
+              <div class="svc-laptop">
+                <div class="svc-laptop__screen">
+                  <div class="svc-laptop__top">
+                    <span class="svc-laptop__brand"></span>
+                    <div class="svc-laptop__dots"><span></span><span></span><span></span></div>
+                  </div>
+                  <div class="svc-laptop__body">
+                    <div>
+                      <div class="svc-line-h"></div>
+                      <div class="svc-line-p"></div>
+                      <div class="svc-line-p svc-line-p--short"></div>
+                      <div class="svc-btn-bar"></div>
+                    </div>
+                    <div class="svc-laptop__photo">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                        <polyline points="21 15 16 10 5 21"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="svc-laptop__base"></div>
+              </div>
+            </div>
+            <h3 class="service-card__title">Custom Web Development</h3>
+            <p class="service-card__desc">
+              Professional, fast, and mobile-friendly websites built to represent your business and turn visitors into customers.
+            </p>
+            <div>
+              <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                Talk to Us
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2: AI WhatsApp Chatbots -->
+          <article class="service-card reveal">
+            <div class="service-visual" aria-label="AI WhatsApp Chatbot messaging mockup">
+              <div class="svc-chat">
+                <div class="svc-chat__head">
+                  <span>Business Assistant</span>
+                  <span class="svc-chat__status">Online</span>
+                </div>
+                <div class="svc-chat__body">
+                  <div class="chat-msg chat-msg--in">Hi, can you share details about your services?</div>
+                  <div class="chat-msg chat-msg--out">Of course! Would you like to schedule a quick call?</div>
+                  <div class="chat-msg chat-msg--in">Yes, tomorrow morning works.</div>
+                </div>
+              </div>
+            </div>
+            <h3 class="service-card__title">AI WhatsApp Chatbots</h3>
+            <p class="service-card__desc">
+              Automate customer replies, answer common questions instantly, capture leads, and provide 24/7 support through WhatsApp.
+            </p>
+            <div>
+              <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                Talk to Us
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 3: AI Voice Agents -->
+          <article class="service-card reveal">
+            <div class="service-visual" aria-label="AI Voice Agent call card mockup">
+              <div class="svc-voice">
+                <div class="svc-voice__head">
+                  <div class="svc-voice__avatar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                  </div>
+                  <div class="svc-voice__info">
+                    <strong>AI Voice Receptionist</strong>
+                    <span>Customer Inquiry · Active Call</span>
+                  </div>
+                </div>
+                <div class="svc-voice__wave" aria-hidden="true">
+                  <span class="svc-bar" style="height: 10px;"></span>
+                  <span class="svc-bar" style="height: 18px;"></span>
+                  <span class="svc-bar" style="height: 26px;"></span>
+                  <span class="svc-bar" style="height: 14px;"></span>
+                  <span class="svc-bar" style="height: 28px;"></span>
+                  <span class="svc-bar" style="height: 20px;"></span>
+                  <span class="svc-bar" style="height: 12px;"></span>
+                  <span class="svc-bar" style="height: 22px;"></span>
+                  <span class="svc-bar" style="height: 14px;"></span>
+                </div>
+                <div class="svc-voice__footer">
+                  <span>Answering FAQ &amp; booking</span>
+                  <span>24/7 Ready</span>
+                </div>
+              </div>
+            </div>
+            <h3 class="service-card__title">AI Voice Agents</h3>
+            <p class="service-card__desc">
+              Intelligent voice agents that can handle calls, answer customer questions, qualify leads, and automate routine conversations.
+            </p>
+            <div>
+              <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                Talk to Us
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Why Choose Neo Website -->
+    <section id="why-us" class="section section--white">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Why Choose Neo Website</span>
+          <h2 class="section-title">Built for reliability, speed, and real business impact</h2>
+          <p class="section-subtitle">
+            We combine clean modern engineering with practical AI tools that work seamlessly for your customers.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                <path d="M3 9h18"></path>
+                <path d="M9 21V9"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Modern and Professional Design</h3>
+            <p class="benefit-card__desc">
+              Clean, trustworthy interfaces crafted to make a strong first impression and reflect the quality of your brand.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 2v3"></path>
+                <path d="M12 19v3"></path>
+                <path d="M4.93 4.93l2.12 2.12"></path>
+                <path d="M16.95 16.95l2.12 2.12"></path>
+                <path d="M2 12h3"></path>
+                <path d="M19 12h3"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Smart AI Automation</h3>
+            <p class="benefit-card__desc">
+              Practical WhatsApp chatbots and voice agents that eliminate repetitive work and respond to leads around the clock.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Mobile-Friendly Experience</h3>
+            <p class="benefit-card__desc">
+              Every website and automated flow is carefully optimized so customers enjoy a smooth experience on any device.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Fast and Clear Communication</h3>
+            <p class="benefit-card__desc">
+              Direct WhatsApp collaboration with zero unnecessary complexity—stay updated from day one until launch.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How It Works -->
+    <section id="process" class="section section--gray">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="section-title">From your first message to a smarter business</h2>
+          <p class="section-subtitle">
+            A clear four-step process designed to get your website or AI assistant live without friction.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="step-card reveal">
+            <div class="step-card__num">1</div>
+            <h3 class="step-card__title">Contact Us on WhatsApp</h3>
+            <p class="step-card__desc">
+              Tap any WhatsApp button on this page to start a direct chat with the Neo Website team.
+            </p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-card__num">2</div>
+            <h3 class="step-card__title">Tell Us Your Business Requirements</h3>
+            <p class="step-card__desc">
+              Share your business goals, customer questions, or the kind of website or AI tool you want to build.
+            </p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-card__num">3</div>
+            <h3 class="step-card__title">Get a Custom Solution</h3>
+            <p class="step-card__desc">
+              We design, build, and test a tailored website, WhatsApp chatbot, or voice agent built around your workflow.
+            </p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-card__num">4</div>
+            <h3 class="step-card__title">Launch and Grow Your Business</h3>
+            <p class="step-card__desc">
+              Go live with confidence and let your new digital presence and AI automation work for you 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Portfolio Section -->
+    <section id="portfolio" class="section section--white">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-title">Selected concepts &amp; project showcases</h2>
+          <p class="section-subtitle">
+            Explore examples of custom websites and AI automation solutions we build for modern businesses.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Project 1: Business Website -->
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__visual">
+              <div class="portfolio-frame">
+                <div class="portfolio-frame__top">
+                  <div class="portfolio-frame__dots"><span></span><span></span><span></span></div>
+                  <span class="portfolio-frame__tag">Business Website</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 14px; align-items: center;">
+                  <div>
+                    <div class="svc-line-h" style="width: 82%;"></div>
+                    <div class="svc-line-p"></div>
+                    <div class="svc-line-p svc-line-p--short"></div>
+                    <div class="svc-btn-bar"></div>
+                  </div>
+                  <div style="height: 76px; border-radius: 8px; background: var(--bg-gray); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__label">Business Website</span>
+              <h3 class="portfolio-card__title">Modern B2B &amp; Service Company Website</h3>
+              <p class="portfolio-card__desc">
+                A clean, fast-loading corporate website built to showcase services, establish credibility, and route customer inquiries straight to WhatsApp.
+              </p>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--sm view-project-btn"
+                  data-label="Business Website"
+                  data-title="Modern B2B & Service Company Website"
+                  data-desc="Designed for service businesses and consultancies needing a polished online presence. Includes responsive service pages, clear trust signals, fast load times, and one-tap WhatsApp lead capture.">
+                  View Project
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Restaurant Website -->
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__visual">
+              <div class="portfolio-frame">
+                <div class="portfolio-frame__top">
+                  <div class="portfolio-frame__dots"><span></span><span></span><span></span></div>
+                  <span class="portfolio-frame__tag">Restaurant Website</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; height: 82px;">
+                  <div style="border-radius: 8px; background: var(--bg-gray); border: 1px solid var(--border); padding: 9px; display: flex; flex-direction: column; justify-content: flex-end;">
+                    <div class="svc-line-h" style="height: 6px; width: 78%; margin-bottom: 4px;"></div>
+                    <div class="svc-line-p" style="width: 56%; margin-bottom: 0;"></div>
+                  </div>
+                  <div style="border-radius: 8px; background: var(--bg-gray); border: 1px solid var(--border); padding: 9px; display: flex; flex-direction: column; justify-content: flex-end;">
+                    <div class="svc-line-h" style="height: 6px; width: 82%; margin-bottom: 4px;"></div>
+                    <div class="svc-line-p" style="width: 52%; margin-bottom: 0;"></div>
+                  </div>
+                  <div style="border-radius: 8px; background: var(--charcoal); color: #fff; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.7rem; font-weight: 600;">
+                    Book Table
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__label">Restaurant Website</span>
+              <h3 class="portfolio-card__title">Digital Menu &amp; Table Reservation Website</h3>
+              <p class="portfolio-card__desc">
+                A mobile-first restaurant showcase featuring an easy-to-browse digital menu, location map, and instant WhatsApp table reservation button.
+              </p>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--sm view-project-btn"
+                  data-label="Restaurant Website"
+                  data-title="Digital Menu & Table Reservation Website"
+                  data-desc="Built for cafes, restaurants, and hospitality venues. Guests can browse dishes cleanly on mobile, check hours, and reserve a table directly via WhatsApp.">
+                  View Project
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: AI WhatsApp Support Bot -->
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__visual">
+              <div class="portfolio-frame">
+                <div class="portfolio-frame__top">
+                  <span style="font-size: 0.74rem; font-weight: 600;">AI WhatsApp Support Bot</span>
+                  <span class="svc-chat__status">Instant Reply</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 7px;">
+                  <div class="chat-msg chat-msg--in">Hi, do you offer consultations this week?</div>
+                  <div class="chat-msg chat-msg--out">Yes! Share your preferred day and I’ll confirm your slot right away.</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__label">AI WhatsApp Support Bot</span>
+              <h3 class="portfolio-card__title">24/7 Customer Support &amp; Lead Capture Bot</h3>
+              <p class="portfolio-card__desc">
+                An intelligent WhatsApp assistant that answers frequent questions immediately, collects customer contact details, and books appointments automatically.
+              </p>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--sm view-project-btn"
+                  data-label="AI WhatsApp Support Bot"
+                  data-title="24/7 Customer Support & Lead Capture Bot"
+                  data-desc="Trained on your business FAQs and services to reply in seconds, qualify incoming leads, collect requirements, and hand over warm inquiries neatly to your team.">
+                  View Project
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: AI Voice Calling Agent -->
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__visual">
+              <div class="portfolio-frame">
+                <div class="portfolio-frame__top">
+                  <span style="font-size: 0.74rem; font-weight: 600;">AI Voice Calling Agent</span>
+                  <span class="portfolio-frame__tag">Call Automation</span>
+                </div>
+                <div class="svc-voice__wave" style="height: 58px;" aria-hidden="true">
+                  <span class="svc-bar" style="height: 12px;"></span>
+                  <span class="svc-bar" style="height: 22px;"></span>
+                  <span class="svc-bar" style="height: 30px;"></span>
+                  <span class="svc-bar" style="height: 16px;"></span>
+                  <span class="svc-bar" style="height: 32px;"></span>
+                  <span class="svc-bar" style="height: 20px;"></span>
+                  <span class="svc-bar" style="height: 26px;"></span>
+                  <span class="svc-bar" style="height: 14px;"></span>
+                  <span class="svc-bar" style="height: 24px;"></span>
+                  <span class="svc-bar" style="height: 12px;"></span>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__label">AI Voice Calling Agent</span>
+              <h3 class="portfolio-card__title">Automated Inbound &amp; Qualification Voice Agent</h3>
+              <p class="portfolio-card__desc">
+                A natural-sounding AI voice agent built to answer routine phone calls, share business information, and qualify inquiries without missed calls.
+              </p>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn--secondary btn--sm view-project-btn"
+                  data-label="AI Voice Calling Agent"
+                  data-title="Automated Inbound & Qualification Voice Agent"
+                  data-desc="Designed for clinics, real estate teams, and local service providers. Answers calls promptly, responds naturally to common questions, and captures caller details automatically.">
+                  View Project
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Testimonials Section -->
+    <section id="testimonials" class="section section--gray">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2 class="section-title">What growing businesses say about Neo Website</h2>
+          <p class="section-subtitle">
+            Client stories reflecting our focus on clean design, reliable automation, and clear communication.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-card__quote">
+                “Neo Website completely transformed our online presence. Our new website looks clean on mobile, and customers reach out to us directly on WhatsApp every day.”
+              </p>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-avatar" aria-label="Client avatar placeholder">AS</div>
+              <div>
+                <div class="testimonial-name">Arjun Sharma</div>
+                <div class="testimonial-business">Dental &amp; Wellness Clinic</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-card__quote">
+                “The AI WhatsApp chatbot handles most of our routine inquiries automatically. Even after hours, leads get instant answers and we wake up to qualified bookings.”
+              </p>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-avatar" aria-label="Client avatar placeholder">NV</div>
+              <div>
+                <div class="testimonial-name">Neha Verma</div>
+                <div class="testimonial-business">Real Estate Advisory</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-card__quote">
+                “Adding an AI voice agent saved our front desk hours every single week. Communication with Neo Website was fast, clear, and completely stress-free.”
+              </p>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-avatar" aria-label="Client avatar placeholder">RK</div>
+              <div>
+                <div class="testimonial-name">Rohan Kulkarni</div>
+                <div class="testimonial-business">Hospitality &amp; Restaurant Group</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ Section -->
+    <section id="faq" class="section section--white">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions answered clearly</h2>
+          <p class="section-subtitle">
+            Everything you need to know before starting a project with Neo Website.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="true" aria-controls="faq-1">
+              <span>How long does website development take?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-panel is-open" id="faq-1">
+              Most custom business websites are designed, built, and launched within 1 to 2 weeks depending on the number of pages and features required. We share clear milestones on WhatsApp so you always know the exact timeline.
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-2">
+              <span>How do AI WhatsApp chatbots work?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-2">
+              We train your WhatsApp chatbot on your business details, FAQs, services, and booking flow. Whenever a customer sends a message, the AI replies instantly in natural language, answers their questions, captures lead details, and notifies your team when needed.
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-3">
+              <span>What can AI voice agents do for my business?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-3">
+              AI voice agents can answer incoming calls 24/7, speak naturally with callers, answer common business questions, qualify potential leads, confirm routine appointments, and summarize call details so no opportunity is ever missed.
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-4">
+              <span>Do your services work for small and local businesses?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-4">
+              Yes! Our solutions are specifically built for small and growing businesses—such as clinics, restaurants, agencies, salons, retail stores, and service providers—who want modern technology without complexity.
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-5">
+              <span>How do we get started?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-5">
+              Getting started is simple—click any “Chat on WhatsApp” button on this page to message us directly at +91 87360 04205. Tell us briefly about your business, and we’ll recommend the best website or AI automation setup for you.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section id="contact" class="section section--gray">
+      <div class="container">
+        <div class="contact-box reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="contact-box__title">Let’s Build Something Smart for Your Business.</h2>
+          <p class="contact-box__text">
+            Tell us what your business needs, and Neo Website will help you find the right website or AI automation solution.
+          </p>
+
+          <div class="contact-box__actions">
+            <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              Chat with Neo Website on WhatsApp
+            </a>
+
+            <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="contact-number">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              +91 87360 04205
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="brand">
+        <span class="brand__mark" aria-hidden="true">N</span>
+        <span>Neo Website</span>
+      </a>
+
+      <ul class="footer__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer">WhatsApp: +91 87360 04205</a></li>
+      </ul>
+
+      <span class="footer__copy">© <span id="year"></span> Neo Website. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <span class="modal__label" id="modalLabel">Category</span>
+      <h3 class="modal__title" id="modalTitle">Project Title</h3>
+      <p class="modal__desc" id="modalDesc">Project summary.</p>
+      <a href="https://wa.me/918736004205" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">
+        Discuss a Similar Project on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile drawer toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    navToggle.addEventListener('click', () => {
+      const open = mobileDrawer.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.querySelectorAll('.mobile-drawer__link').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // FAQ accordion
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    faqTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+
+        faqTriggers.forEach((item) => {
+          item.setAttribute('aria-expanded', 'false');
+          const p = document.getElementById(item.getAttribute('aria-controls'));
+          if (p) p.classList.remove('is-open');
+        });
+
+        if (!isExpanded) {
+          trigger.setAttribute('aria-expanded', 'true');
+          panel.classList.add('is-open');
+        }
+      });
+    });
+
+    // Portfolio preview modal
+    const modal = document.getElementById('projectModal');
+    const modalLabel = document.getElementById('modalLabel');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalClose = document.getElementById('modalClose');
+
+    document.querySelectorAll('.view-project-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modalLabel.textContent = btn.dataset.label;
+        modalTitle.textContent = btn.dataset.title;
+        modalDesc.textContent = btn.dataset.desc;
+        modal.classList.add('is-open');
+        modalClose.focus();
+      });
+    });
+
+    const closeModal = () => modal.classList.remove('is-open');
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    // Gentle scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+      revealEls.forEach((el) => observer.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-visible'));
+    }
+  </script>
+</body>
+</html>
